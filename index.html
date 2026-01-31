@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UDAAN 2K26 | RGNAU - Let's Map The Sky</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <canvas id="starfield"></canvas>
+
+    <nav class="navbar">
+        <div class="logo">UDAAN <span>2K26</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#brochure">Brochure</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#" class="btn-register">Register Now</a></li>
+        </ul>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h3>RAJIV GANDHI NATIONAL AVIATION UNIVERSITY</h3>
+            <h1>UDAAN <span>2K26</span></h1>
+            <p class="tagline">"LET'S MAP THE SKY"</p>
+            
+            <div id="countdown" class="countdown-container">
+                <div class="time-box"><span id="days">00</span><p>Days</p></div>
+                <div class="time-box"><span id="hours">00</span><p>Hours</p></div>
+                <div class="time-box"><span id="minutes">00</span><p>Min</p></div>
+                <div class="time-box"><span id="seconds">00</span><p>Sec</p></div>
+            </div>
+
+            <p class="date">23rd - 27th February 2026</p>
+            <div class="hero-btns">
+                <a href="#events" class="btn-primary">Explore Galaxy of Events</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="events" class="section">
+        <h2 class="section-title">Fest Constellations</h2>
+        <div class="event-tabs">
+            <button class="tab-btn active" onclick="showTab('tech')">ABHYUDAYA (Tech)</button>
+            <button class="tab-btn" onclick="showTab('cultural')">KALTARANG (Cultural)</button>
+            <button class="tab-btn" onclick="showTab('sports')">ATHLEON (Sports)</button>
+        </div>
+
+        <div id="tech" class="tab-content active">
+            <div class="event-grid">
+                <div class="event-card"><h3>Water Rocket </h3><p>Engineer a bottle rocket for maximum altitude.</p></div>
+                <div class="event-card"><h3>RC Plane </h3><p>Showcase custom aircraft flight stability.</p></div>
+                <div class="event-card"><h3>Robo Soccer </h3><p>Program autonomous robots for high-stakes matches.</p></div>
+                <div class="event-card"><h3>Bridge Making </h3><p>Test structural engineering with maximum loads.</p></div>
+                <div class="event-card"><h3>RC Boat </h3><p>Test structural engineering with maximum loads.</p></div>
+                <div class="event-card"><h3>Horizan Hunt </h3><p>Test structural engineering with maximum loads.</p></div>
+                <div class="event-card"><h3>Mind Over Market </h3><p>Test structural engineering with maximum loads.</p></div>
+                <div class="event-card"><h3>Samrt City Innovation Challenge </h3><p>Test structural engineering with maximum loads.</p></div>
+                <div class="event-card"><h3>Gliadator</h3><p>Test structural engineering with maximum loads.</p></div>
+                <div class="event-card"><h3>Rubics Cube</h3><p>Test structural engineering with maximum loads.</p></div>
+                <div class="event-card"><h3>Science Exhibition </h3><p>Test structural engineering with maximum loads.</p></div>
+                <div class="event-card"><h3>Global Brain Battle</h3><p>Test structural engineering with maximum loads.</p></div>
+                <div class="event-card"><h3>Innovation Challenge </h3><p>Test structural engineering with maximum loads.</p></div>
+                <div class="event-card"><h3>Quiz on science and Tech</h3><p>Test structural engineering with maximum loads.</p></div>
+                <div class="event-card"><h3>Tech Short Film</h3><p>Test structural engineering with maximum loads.</p></div>
+            </div>
+        </div>
+
+        <div id="cultural" class="tab-content">
+            <div class="event-grid">
+                <div class="event-card"><h3>RhythmX</h3><p>A dazzling display of various dance styles.</p></div>
+                <div class="event-card"><h3>Melody Mania</h3><p>Vocal talent competition for singers.</p></div>
+                <div class="event-card"><h3>RampRiot</h3><p>High-energy fashion ramp-walk event.</p></div>
+                <div class="event-card"><h3>Stage Storm</h3><p>Drama, acting, and artistic expressions.</p></div>
+                <div class="event-card"><h3>Poster Making</h3><p>Drama, acting, and artistic expressions.</p></div>
+                <div class="event-card"><h3>Painting</h3><p>Drama, acting, and artistic expressions.</p></div>
+                <div class="event-card"><h3>HIndi Poetry</h3><p>Drama, acting, and artistic expressions.</p></div>
+                <div class="event-card"><h3>Instrumental Play</h3><p>Drama, acting, and artistic expressions.</p></div>
+            </div>
+        </div> 
+
+        <div id="sports" class="tab-content">
+            <div class="event-grid">
+                <div class="event-card"><h3>Football</h3><p>The ultimate arena for disciplined endurance.</p></div>
+                <div class="event-card"><h3>Kabaddi</h3><p>Showcase stamina and strategic strength.</p></div>
+                <div class="event-card"><h3>Athletics</h3><p>Sprints, relay races, and field events.</p></div>
+                <div class="event-card"><h3>Tug of War</h3><p>A battle of raw power and unity.</p></div>
+                <div class="event-card"><h3>Volleyball</h3><p>A Arena of Matches.</p></div>
+            </div>
+        </div>
+    </section>
+
+    
+    <div id="registerModal" class="modal">
+    <div class="modal-content glass">
+        <span class="close-btn">&times;</span>
+        <h2>Registration</h2>
+        <form id="registrationForm">
+            <div class="form-group"><input type="text" id="regName" name="name" placeholder="Full Name" required></div>
+            <div class="form-group"><input type="email" id="regEmail" name="email" placeholder="Email address" required></div>
+            <div class="form-group">
+                <select id="regCategory" name="category" required>
+                    <option value="" disabled selected>Select Fest</option>
+                    <option value="Abhyudaya">ABHYUDAYA (Tech)</option>
+                    <option value="Kaltarang">KALTARANG (Cultural)</option>
+                    <option value="Athleon">ATHLEON (Sports)</option>
+                </select>
+            </div>
+            <div class="form-group"><input type="tel" id="regPhone" name="phone" placeholder="Phone Number" required></div>
+            <button type="submit" id="submitBtn" class="btn-primary">Confirm Takeoff</button>
+        </form>
+    </div>
+</div>
+
+    <section id="brochure" class="section">
+    <h2 class="section-title">Official Documentation</h2>
+    <div class="brochure-container glass">
+        <div class="brochure-preview">
+            <div class="preview-overlay">
+                <i class="fas fa-file-pdf"></i>
+                <p>UDAAN 2K26 Official Event Brochure</p>
+                <a href="Event brochure (12).pdf" download class="btn-primary">
+                    <i class="fas fa-download"></i> Download Full PDF
+                </a>
+            </div>
+            <div class="brochure-mockup">
+                <h3>UDAAN 2K26</h3>
+                <p>India's First Aviation Fest</p>
+                <hr>
+                <span>Tech || Cultural || Sports</span>
+            </div>
+        </div>
+        <div class="brochure-info">
+            <h3>Mapping the Sky</h3>
+            <p>Get the complete details for the Rajiv Gandhi National Aviation University annual fest.</p>
+            <ul class="brochure-features">
+                <li><i class="fas fa-check-circle"></i> 23rd - 27th Feb 2026 Schedule</li>
+                <li><i class="fas fa-check-circle"></i> Technical (Abhyudaya) Details</li>
+                <li><i class="fas fa-check-circle"></i> Cultural (Kaltarang) Lineup</li>
+                <li><i class="fas fa-check-circle"></i> Sports (Athleon) Categories</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+    <section id="contact" class="section">
+    <h2 class="section-title">Mission Control Support</h2>
+    <div class="contact-container glass">
+        <div class="contact-grid">
+            <div class="contact-info-box">
+                <h3>Get in Touch</h3>
+                <p>Have a query or technical glitch? Our ground crew is ready to assist.</p>
+                
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>harirgnau@gmail.com</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>RGNAU, Fursatganj, Amethi [cite: 8]</span>
+                </div>
+                
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="contact-form-box">
+                <form action="https://formspree.io/f/harirgnau@gmail.com" method="POST" id="issueForm">
+                    <div class="form-row">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <select name="issue-category" required>
+                        <option value="" disabled selected>Category of Issue</option>
+                        <option value="registration">Registration Error</option>
+                        <option value="event-query">Event Query (Tech/Cult/Sports)</option>
+                        <option value="sponsorship">Sponsorship Inquiry</option>
+                        <option value="other">Other Technical Issue</option>
+                    </select>
+                    <textarea name="message" rows="5" placeholder="Describe your issue in detail..." required></textarea>
+                    
+                    <input type="hidden" name="_subject" value="New UDAAN 2K26 Issue Reported">
+                    
+                    <button type="submit" class="btn-primary">Launch Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- <section id="contact" class="section glass">
+        <h2 class="section-title">Mission Control</h2>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h3>Coordinators [cite: 336]</h3>
+                <p><strong>Dr. Anup Kumar (Dean SW):</strong> anup.kumar@rgnau.ac.in [cite: 337]</p>
+                <p><strong>Dr. Manish Kumar (Dean SOET):</strong> manish.kumar@rgnau.ac.in [cite: 338]</p>
+            </div>
+            <div class="contact-info">
+                <h3>Student Leads [cite: 342]</h3>
+                <p><strong>Bhagwati Sharan Jha (Tech):</strong> +91 9204453221 [cite: 347, 348]</p>
+                <p><strong>Kapilan R (Cultural):</strong> +91 9043128258 [cite: 350, 351]</p>
+                <p><strong>Manimaran M (Sports):</strong> +91 9363984737 [cite: 345, 346]</p>
+            </div>
+        </div>
+    </section> -->
+
+    <footer class="footer">
+        <p>Fursatganj, Amethi, Uttar Pradesh</p>
+        <p>&copy; 2026 Rajiv Gandhi National Aviation University.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+    <div id="thankYouOverlay" class="thank-you-overlay">
+        <div class="rocket-container">
+         <i class="fas fa-rocket"></i>
+        <div class="exhaust-fumes"></div>
+        </div>
+        <h2>MISSION SUCCESSFUL!</h2>
+        <p>Your data has reached Mission Control at RGNAU.</p>
+    </div>
+</html>
