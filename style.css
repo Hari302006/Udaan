@@ -242,4 +242,50 @@ input, select { width: 100%; padding: 12px; background: rgba(255,255,255,0.05); 
     color: var(--primary);
     letter-spacing: 5px;
     margin-top: 20px;
+
+}
+
+/* Mobile Responsive Adjustments */
+.menu-icon {
+    display: none; /* Hidden on Desktop */
+    font-size: 1.5rem;
+    color: var(--primary);
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block; /* Show on Phone */
+    }
+
+    .nav-links {
+        display: none; /* Hide by default on Phone */
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: rgba(5, 5, 10, 0.95);
+        border-bottom: 1px solid var(--primary);
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    /* Class to show menu when toggled */
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .btn-register {
+        display: inline-block;
+        width: 80%; /* Makes button easier to tap on phone */
+    }
+
+    .hero h1 {
+        font-size: 2.5rem; /* Shrink text for phone screens */
+    }
 }
