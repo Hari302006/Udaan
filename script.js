@@ -103,4 +103,29 @@ regForm.addEventListener('submit', e => {
         submitBtn.disabled = false;
         submitBtn.innerText = "Confirm Takeoff";
     });
+
+});
+
+// Mobile Menu Toggle
+const menuIcon = document.getElementById('menuIcon');
+const navLinks = document.getElementById('navLinks');
+
+menuIcon.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    
+    // Toggle icon between "Bars" and "Times (X)"
+    const icon = menuIcon.querySelector('i');
+    if (navLinks.classList.contains('active')) {
+        icon.classList.replace('fa-bars', 'fa-times');
+    } else {
+        icon.classList.replace('fa-times', 'fa-bars');
+    }
+});
+
+// Close menu when a link is clicked (Optional, for better UX)
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        menuIcon.querySelector('i').classList.replace('fa-times', 'fa-bars');
+    });
 });
