@@ -129,3 +129,80 @@ document.querySelectorAll('.nav-links a').forEach(link => {
         menuIcon.querySelector('i').classList.replace('fa-times', 'fa-bars');
     });
 });
+
+// --- Cursor Trail Animation ---
+document.addEventListener('mousemove', (e) => {
+    createParticle(e.clientX, e.clientY);
+});
+
+function createParticle(x, y) {
+    const particle = document.createElement('div');
+    particle.className = 'cursor-particle';
+    document.body.appendChild(particle);
+
+    // Initial position
+    particle.style.left = `${x}px`;
+    particle.style.top = `${y}px`;
+
+    // Randomize movement slightly
+    const destinationX = x + (Math.random() - 0.5) * 50;
+    const destinationY = y + (Math.random() - 0.5) * 50;
+
+    // Trigger the animation
+    const animation = particle.animate([
+        { transform: 'translate(0, 0) scale(1)', opacity: 0.8 },
+        { transform: `translate(${destinationX - x}px, ${destinationY - y}px) scale(0)`, opacity: 0 }
+    ], {
+        duration: 800,
+        easing: 'ease-out'
+    });
+
+    // Remove element after animation finishes
+    animation.onfinish = () => {
+        particle.remove();
+    };
+}
+
+
+
+// --- Shooting Star Random Generator ---
+function createShootingStar() {
+    const star = document.createElement('div');
+    star.className = 'shooting-star';
+    document.body.appendChild(star);
+
+    // Randomize starting position
+    const startX = Math.random() * window.innerWidth;
+    const startY = Math.random() * window.innerHeight / 2;
+    
+    star.style.left = `${startX}px`;
+    star.style.top = `${startY}px`;
+
+    // Remove after animation
+    setTimeout(() => {
+        star.remove();
+    }, 2000);
+}
+
+// Style for the shooting star
+const style = document.createElement('style');
+style.textContent = `
+    .shooting-star {
+        position: fixed;
+        width: 150px;
+        height: 2px;
+        background: linear-gradient(90deg, var(--primary), transparent);
+        transform: rotate(-45deg);
+        pointer-events: none;
+        z-index: -1;
+        animation: shoot 2s linear forwards;
+    }
+    @keyframes shoot {
+        0% { transform: translate(0, 0) rotate(-45deg); opacity: 1; }
+        100% { transform: translate(500px, 500px) rotate(-45deg); opacity: 0; }
+    }
+`;
+document.head.appendChild(style);
+
+// Trigger a star every 4-8 seconds
+setInterval(createShootingStar, Math.random() * 4000 + 4000);
