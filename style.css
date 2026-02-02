@@ -444,7 +444,7 @@ input, select { width: 100%; padding: 12px; background: rgba(7, 0, 0, 0.862); bo
 }
 
 .fest-logo-nav {
-    height: 100px; /* Adjust based on your preference */
+    height: 140px; /* Adjust based on your preference */
     width: auto;
     filter: drop-shadow(0 0 8px rgba(0, 210, 255, 0.4));
     transition: transform 0.3s ease;
@@ -585,4 +585,5 @@ input, select { width: 100%; padding: 12px; background: rgba(7, 0, 0, 0.862); bo
     transition: 0.3s;
     box-shadow: 0 0 15px var(--primary);
 }
+
 
