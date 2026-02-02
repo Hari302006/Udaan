@@ -470,7 +470,7 @@ input, select { width: 100%; padding: 12px; background: rgba(7, 0, 0, 0.862); bo
 
 @media (max-width: 768px) {
     .fest-logo-nav {
-        height: 45px; /* Smaller fest logo on phones */
+        height: 90px; /* Smaller fest logo on phones */
     }
     .univ-logo {
         height: 35px;
@@ -585,5 +585,6 @@ input, select { width: 100%; padding: 12px; background: rgba(7, 0, 0, 0.862); bo
     transition: 0.3s;
     box-shadow: 0 0 15px var(--primary);
 }
+
 
 
