@@ -361,3 +361,227 @@ input, select { width: 100%; padding: 12px; background: rgba(255,255,255,0.05); 
     color: #05050a;
 }
 
+
+
+/* Header Logo Styling */
+.header-logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.univ-logo {
+    height: 50px; /* Adjust height as needed */
+    width: auto;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.2));
+}
+
+.univ-logo:hover {
+    transform: scale(1.1);
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.univ-name-hindi {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text);
+    line-height: 1.2;
+}
+
+.univ-name-eng {
+    font-size: 0.7rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    color: var(--primary);
+}
+
+/* Mobile Adjustments for Logo */
+@media (max-width: 768px) {
+    .univ-logo {
+        height: 40px;
+    }
+    
+    .logo-text {
+        display: none; /* Hides text on small phones to save space */
+    }
+}
+
+
+
+/* Navbar Layout */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Aligns left, center, and right sections */
+    align-items: center;
+    padding: 0.5rem 3%;
+    background: rgba(5, 5, 10, 0.95);
+    backdrop-filter: blur(15px);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(0, 210, 255, 0.2);
+}
+
+/* Left Section */
+.nav-left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Center Section (UDAAN Logo) */
+.nav-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fest-logo-nav {
+    height: 100px; /* Adjust based on your preference */
+    width: auto;
+    filter: drop-shadow(0 0 8px rgba(0, 210, 255, 0.4));
+    transition: transform 0.3s ease;
+}
+
+.fest-logo-nav:hover {
+    transform: scale(1.2);
+}
+
+/* Right Section */
+.nav-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 992px) {
+    .desktop-only {
+        display: none; /* Hides university text on smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .fest-logo-nav {
+        height: 45px; /* Smaller fest logo on phones */
+    }
+    .univ-logo {
+        height: 35px;
+    }
+}
+
+
+/* Cursor Particle Style */
+.cursor-particle {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    background-color: var(--primary); /* Cosmic Blue */
+    border-radius: 50%;
+    pointer-events: none; /* Won't interfere with clicking buttons */
+    z-index: 9999;
+    opacity: 0.8;
+    box-shadow: 0 0 10px var(--primary);
+    transition: transform 0.1s ease-out, opacity 0.5s ease-out;
+}
+
+
+/* Warp Speed Hover Effect */
+.event-card {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.event-card::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: all 0.6s ease;
+    z-index: -1;
+}
+
+.event-card:hover {
+    transform: scale(1.05) perspective(1000px) rotateX(5deg);
+    border-color: var(--primary);
+    box-shadow: 0 0 30px rgba(0, 210, 255, 0.6);
+}
+
+.event-card:hover::before {
+    width: 300%;
+    height: 300%;
+    opacity: 0.2;
+}
+
+/* Add a glowing text effect on hover */
+.event-card:hover h3 {
+    text-shadow: 0 0 10px var(--primary);
+    letter-spacing: 3px;
+    transition: 0.4s;
+}
+
+
+
+/* Neon Breathing Nav Links */
+.nav-links li a {
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.nav-links li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    box-shadow: 0 0 10px var(--primary);
+    transition: width 0.3s ease;
+}
+
+.nav-links li a:hover::after {
+    width: 100%;
+    animation: neonPulse 1.5s infinite ease-in-out;
+}
+
+@keyframes neonPulse {
+    0%, 100% { box-shadow: 0 0 5px var(--primary); }
+    50% { box-shadow: 0 0 20px var(--primary), 0 0 30px var(--primary); }
+}
+
+
+
+/* Pop-up Animation for Buttons */
+@keyframes buttonPop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1.05); }
+}
+
+.btn-primary:active {
+    animation: buttonPop 0.3s ease-out forwards;
+    box-shadow: 0 0 30px var(--primary);
+}
+
+/* Optional: Subtle hover pulse to encourage the click */
+.btn-primary:hover {
+    transform: translateY(-2px);
+    transition: 0.3s;
+    box-shadow: 0 0 15px var(--primary);
+}
