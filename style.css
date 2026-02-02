@@ -587,4 +587,26 @@ input, select { width: 100%; padding: 12px; background: rgba(7, 0, 0, 0.862); bo
 }
 
 
+/* Mobile Adjustments for Logo Sizes */
+@media (max-width: 768px) {
+    /* Main UDAAN Fest Logo */
+    .fest-logo-nav {
+        height: 75px; /* Increased from 45px for better visibility */
+        width: auto;
+        padding: 5px 0;
+        /* Ensures the logo doesn't overlap with links */
+        max-width: 140px; 
+    }
+
+    /* University Logo on the Left */
+    .univ-logo {
+        height: 45px; /* Slightly larger to match the center logo */
+        border-radius: 20%;
+    }
+
+    /* Adjust navbar padding for mobile to give logos room */
+    .navbar {
+        padding: 0.8rem 4%;
+    }
+}
 
