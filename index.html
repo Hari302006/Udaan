@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UDAAN 2K26 | RGNAU - Let's Map The Sky</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <canvas id="starfield"></canvas>
+
+    <nav class="navbar">
+    <div class="nav-left">
+        <img src="RGNAU_LOGO.png" alt="RGNAU Logo" class="univ-logo">
+        <div class="logo-text desktop-only">
+            <!-- <span class="univ-name-hindi">राजीव गाँधी राष्ट्रीय विमानन विश्वविद्यालय</span>
+            <span class="univ-name-eng">RAJIV GANDHI NATIONAL AVIATION UNIVERSITY</span> -->
+        </div>
+    </div>
+    
+    <div class="nav-center">
+        <img src="UDAAN_LOGO.png" alt="UDAAN 2K26 Logo" class="fest-logo-nav">
+    </div>
+
+    <div class="nav-right">
+        <div class="menu-icon" id="menuIcon">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#contact">Support</a></li>
+
+<div class="hero-btns">
+    <a href="https://forms.gle/G4CXY2ZwhupQFW1w5" target="_blank" class="btn-primary btn-pop">Register Now</a>
+</div>
+        </ul>
+    </div>
+</nav>
+
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#brochure">Brochure</a></li>
+            <li><a href="#contact">Contact</a></li>
+
+<div class="hero-btns">
+    <a href="https://forms.gle/G4CXY2ZwhupQFW1w5" target="_blank" class="btn-primary btn-pop">Register Now</a>
+</div>
+        </ul>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h3>RAJIV GANDHI NATIONAL AVIATION UNIVERSITY</h3>
+            <h1>UDAAN <span>2K26</span></h1>
+            <p class="tagline">"LET'S MAP THE SKY"</p>
+            
+            <div id="countdown" class="countdown-container">
+                <div class="time-box"><span id="days">00</span><p>Days</p></div>
+                <div class="time-box"><span id="hours">00</span><p>Hours</p></div>
+                <div class="time-box"><span id="minutes">00</span><p>Min</p></div>
+                <div class="time-box"><span id="seconds">00</span><p>Sec</p></div>
+            </div>
+
+            <p class="date">23rd - 27th February 2026</p>
+            <div class="hero-btns">
+                <a href="#events" class="btn-primary">Explore Galaxy of Events</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="events" class="section">
+        <h2 class="section-title">Fest Constellations</h2>
+        <div class="event-tabs">
+            <button class="tab-btn active" onclick="showTab('tech')">ABHYUDAYA (Tech)</button>
+            <button class="tab-btn" onclick="showTab('cultural')">KALTARANG (Cultural)</button>
+            <button class="tab-btn" onclick="showTab('sports')">ATHLEON (Sports)</button>
+        </div>
+
+        <div id="tech" class="tab-content active">
+    <div class="event-grid">
+        <a href="rules/RC_Plane_Rules.pdf" download class="event-card">
+            <i class="fas fa-plane"></i>
+            <h3>RC Plane</h3>
+            <p>Master flight stability and aeronautical design. <br><strong>(Click to Download Rules)</strong></p>
+        </a>
+
+        <a href="rules/Water_Rocket_Rules.pdf" download class="event-card">
+            <i class="fas fa-rocket"></i>
+            <h3>Water Rocket</h3>
+            <p>Engineer for maximum altitude and trajectory. <br><strong>(Click to Download Rules)</strong></p>
+        </a>
+
+        <a href="rules/Bridge_Making_Rules.pdf" download class="event-card">
+            <i class="fas fa-archway"></i>
+            <h3>Bridge Making</h3>
+            <p>Design a structure to support maximum load. <br><strong>(Click to Download Rules)</strong></p>
+        </a>
+
+        <a href="rules/Robo_Soccer_Rules.pdf" download class="event-card">
+            <i class="fas fa-robot"></i>
+            <h3>Robo Soccer</h3>
+            <p>Autonomous robots in high-stakes matches. <br><strong>(Click to Download Rules)</strong></p>
+        </a>
+
+        <a href="rules/RC_Car_Rules.pdf" download class="event-card">
+            <i class="fas fa-car"></i>
+            <h3>RC Car</h3>
+            <p>Time Game for Rc cars. <br><strong>(Click to Download Rules)</strong></p>
+        </a>
+        <a href="rules/RC_Boat_Rules.pdf" download class="event-card">
+            <i class="fa-solid fa-ship"></i>
+            <h3>RC Boat</h3>
+            <p>Float with control. <br><strong>(Click to Download Rules)</strong></p>
+        </a>
+        <a href="rules/Smart_City_Innovation_Challenge_Rules.pdf" download class="event-card">
+            <i class="fa-solid fa-city"></i>
+            <h3>Smart City Innovation Challenge</h3>
+            <p>Make City Smart with your innovation. <br><strong>(Click to Download Rules)</strong></p>
+        </a>
+
+        <a href="rules/Mind_Over_Market_Rules.pdf" download class="event-card">
+            <i class="fa-solid fa-business-time"></i>
+            <h3>Mind Over Market</h3>
+            <p>Business quiz. <br><strong>(Click to Download Rules)</strong></p>
+        </a>
+
+        <a href="rules/Star_Stoke_Rules.pdf" download class="event-card">
+            <i class="fa-solid fa-paintbrush"></i>
+            <h3>Star Stoke</h3>
+            <p>Paint The imaginations. <br><strong>(Click to Download Rules)</strong></p>
+        </a>
+
+        <a href="rules/Horizon_Hunt _Rules.pdf" download class="event-card">
+            <i class="fa-solid fa-lightbulb"></i>
+            <h3>Horizon Hunt</h3>
+            <p>Show your Ideas. <br><strong>(Click to Download Rules)</strong></p>
+        </a>
+
+        <a href="rules/Innovation_Challenge_Rules.pdf" download class="event-card">
+            <i class="fa-solid fa-lightbulb"></i>
+            <h3>Innovation Challenge</h3>
+            <p>Show your Innovation. <br><strong>(Click to Download Rules)</strong></p>
+        </a>
+
+        <a href="rules/Glidator_Rules.pdf" download class="event-card">
+            <i class="fa-solid fa-plane-arrival"></i>
+            <h3>Gliadator</h3>
+            <p>Fly without engine. <br><strong>(Click to Download Rules)</strong></p>
+        </a>
+        <a href="rules/Rubic_Cube_Rules.pdf" download class="event-card">
+            <i class="fa-solid fa-cube"></i>
+            <h3>Rubics Cube</h3>
+            <p>play with speed and mind. <br><strong>(Click to Download Rules)</strong></p>
+        </a>
+        <a href="rules/Global_Brain_Battle_Rules.pdf" download class="event-card">
+            <i class="fa-solid fa-earth-africa"></i>
+            <h3>Global Brain Battle</h3>
+            <p>Brain Train. <br><strong>(Click to Download Rules)</strong></p>
+        </a>
+
+        <a href="rules/Short_film_Rules.pdf" download class="event-card">
+            <i class="fa-solid fa-film"></i>
+            <h3>Short Film</h3>
+            <p>Shoot And Edit . <br><strong>(Click to Download Rules)</strong></p>
+        </a>
+    </div>
+</div>
+
+<div id="cultural" class="tab-content">
+    <div class="event-grid">
+        <a href="rules/Kaltarang/RhythmX_Rules.pdf" download class="event-card">
+            <i class="fas fa-music"></i>
+            <h3>RhythmX</h3>
+            <p>Showcase your dance choreography. <br><strong>(Click to Download Rules)</strong></p>
+        </a>
+
+        <a href="rules/Kavyanjali_Rules.pdf" download class="event-card">
+            <i class="fa-solid fa-microphone"></i>
+            <h3>Kavayanjali</h3>
+            <p>Showcase your Poetry. <br><strong>(Click to Download Rules)</strong></p>
+        </a>
+        <a href="rules/Sonic_Pulse_Rules.pdf" download class="event-card">
+            <i class="fa-solid fa-guitar"></i>
+            <h3>Sonic Pulse</h3>
+            <p>Instrumental Play. <br><strong>(Click to Download Rules)</strong></p>
+        </a>
+
+        <a href="rules/Ramp_Riot_Rules.pdf" download class="event-card">
+            <i class="fa-solid fa-vest"></i>
+            <h3>Ramp Riot</h3>
+            <p>Ramp walk. <br><strong>(Click to Download Rules)</strong></p>
+        </a>
+        <a href="rules/Stage_Storm_Rules.pdf" download class="event-card">
+            <i class="fa-solid fa-video"></i>
+            <h3>Stage Strom</h3>
+            <p>Drama . <br><strong>(Click to Download Rules)</strong></p>
+        </a>
+
+        <a href="rules/Aura_Arena_Rules.pdf" download class="event-card">
+            <i class="fa-solid fa-star"></i>
+            <h3>Aura Arena</h3>
+            <p>Special Attraction. <br><strong>(Click to Download Rules)</strong></p>
+        </a>
+
+        <a href="rules/Melody_Mania_Rules.pdf" download class="event-card">
+            <i class="fa-solid fa-hands"></i>
+            <h3>Melody Mania</h3>
+            <p>Let the lights glow with your Singing. <br><strong>(Click to Download Rules)</strong></p>
+        </a>
+        </div>
+</div>
+
+    <div id="sports" class="tab-content">
+    <div class="event-grid">
+        <a href="rules/Volleyball.pdf" download class="event-card">
+            <i class="fas fa-volleyball"></i>
+            <h3>VolleyBall</h3>
+            <p>An Arena of Matches. <br><strong>(Click to Download Rules)</strong></p>
+        </a>
+
+        <a href="rules/Football_Rules.pdf" download class="event-card">
+            <i class="fas fa-football"></i>
+            <h3>Football</h3>
+            <p>Play Strongly. <br><strong>(Click to Download Rules)</strong></p>
+        </a>
+
+        <a href="rules/Badminton_Rules.pdf" download class="event-card">
+            <i class="fa-solid fa-baseball"></i>
+            <h3>Badminton</h3>
+            <p>Play With Shuttle. <br><strong>(Click to Download Rules)</strong></p>
+        </a>
+
+        <a href="rules/Chess_Rules.pdf" download class="event-card">
+            <i class="fas fa-chess"></i>
+            <h3>Chess</h3>
+            <p>Play With Spon. <br><strong>(Click to Download Rules)</strong></p>
+        </a>
+
+        <a href="rules/Kabbadi_Rules.pdf" download class="event-card">
+            <i class="fa-solid fa-baseball"></i>
+            <h3>kabaddi</h3>
+            <p>Game. <br><strong>(Click to Download Rules)</strong></p>
+        </a>
+
+        <a href="rules/Tug of war_Rules.pdf" download class="event-card">
+            <i class="fa-solid fa-baseball"></i>
+            <h3>Tug of War</h3>
+            <p>Game. <br><strong>(Click to Download Rules)</strong></p>
+        </a>
+
+        <a href="rules/Table_Tennis_Rules.pdf" download class="event-card">
+            <i class="fa-solid fa-table-tennis-paddle-ball"></i>
+            <h3>Table Tennis</h3>
+            <p>Game. <br><strong>(Click to Download Rules)</strong></p>
+        </a>
+
+         <a href="rules/KHO_KHO_Rules.pdf" download class="event-card">
+            <i class="fa-solid fa-baseball"></i>
+            <h3>Kho-Kho</h3>
+            <p>Game. <br><strong>(Click to Download Rules)</strong></p>
+        </a>
+
+        <a href="rules/Athletics_Rules.pdf" download class="event-card">
+            <i class="fa-solid fa-person-running"></i>
+            <h3>Athletics</h3>
+            <p>Game. <br><strong>(Click to Download Rules)</strong></p>
+        </a>
+        </div>
+    </div>
+    
+
+    <div id="registerModal" class="modal">
+    <div class="modal-content glass">
+        <span class="close-btn">&times;</span>
+        <h2>Registration</h2>
+        <form id="registrationForm">
+            <div class="form-group"><input type="text" id="regName" name="name" placeholder="Full Name" required></div>
+            <div class="form-group"><input type="email" id="regEmail" name="email" placeholder="Email address" required></div>
+            <div class="form-group">
+                <select id="regCategory" name="category" required>
+                    <option value="" disabled selected>Select Fest</option>
+                    <option value="Abhyudaya">ABHYUDAYA (Tech)</option>
+                    <option value="Kaltarang">KALTARANG (Cultural)</option>
+                    <option value="Athleon">ATHLEON (Sports)</option>
+                </select>
+            </div>
+            <!-- <div class="form-group"><input type="tel" id="regUniversity" name="university" placeholder="University" required></div> -->
+            <div class="form-group"><input type="tel" id="regPhone" name="phone" placeholder="Phone Number" required></div>
+            <button type="submit" id="submitBtn" class="btn-primary">Confirm Takeoff</button>
+        </form>
+    </div>
+</div>
+
+    <section id="brochure" class="section">
+    <h2 class="section-title">Official Documentation</h2>
+    <div class="brochure-container glass">
+        <div class="brochure-preview">
+            <div class="preview-overlay">
+                <i class="fas fa-file-pdf"></i>
+                <p>UDAAN 2K26 Official Event Brochure</p>
+                <a href="Brochure.pdf" download class="btn-primary">
+                    <i class="fas fa-download"></i> Download Full PDF
+                </a>
+            </div>
+            <div class="brochure-mockup">
+                <h3>UDAAN 2K26</h3>
+                <p>India's First Aviation Fest</p>
+                <hr>
+                <p>Click Here to download Brochure</p>
+                <hr>
+                <span>Tech || Cultural || Sports</span>
+            </div>
+        </div>
+        <div class="brochure-info">
+            <h3>Mapping the Sky</h3>
+            <p>Get the complete details for the Rajiv Gandhi National Aviation University annual fest.</p>
+            <ul class="brochure-features">
+                <li><i class="fas fa-check-circle"></i> 23rd - 27th Feb 2026 Schedule</li>
+                <li><i class="fas fa-check-circle"></i> Technical (Abhyudaya) Details</li>
+                <li><i class="fas fa-check-circle"></i> Cultural (Kaltarang) Lineup</li>
+                <li><i class="fas fa-check-circle"></i> Sports (Athleon) Categories</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+    <section id="contact" class="section">
+    <h2 class="section-title">Mission Control Support</h2>
+    <div class="contact-container glass">
+        <div class="contact-grid">
+            <div class="contact-info-box">
+                <h3>Get in Touch</h3>
+                <p>Have a query or technical glitch? Our ground crew is ready to assist.</p>
+                
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>udaan2026@rgnau.ac.in</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>RGNAU, Fursatganj, Amethi</span>
+                </div>
+                
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="contact-form-box">
+                <form action="https://formspree.io/f/mojlqoeb" method="POST" id="issueForm">
+                    <div class="form-row">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <select name="issue-category" required>
+                        <option value="" disabled selected>Category of Issue</option>
+                        <option value="registration">Registration Error</option>
+                        <option value="event-query">Event Query (Tech/Cult/Sports)</option>
+                        <option value="sponsorship">Sponsorship Inquiry</option>
+                        <option value="other">Other Technical Issue</option>
+                    </select>
+                    <textarea name="message" rows="5" placeholder="Describe your issue in detail..." required></textarea>
+                    
+                    <input type="hidden" name="_subject" value="New UDAAN 2K26 Issue Reported">
+                    
+                    <button type="submit" class="btn-primary">Launch Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <footer class="footer">
+        <p>Fursatganj, Amethi, Uttar Pradesh</p>
+        <p>&copy; 2026 Rajiv Gandhi National Aviation University.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+    <div id="thankYouOverlay" class="thank-you-overlay">
+        <div class="rocket-container">
+         <i class="fas fa-rocket"></i>
+        <div class="exhaust-fumes"></div>
+        </div>
+        <h2>MISSION SUCCESSFUL!</h2>
+        <p>Your data has reached Mission Control at RGNAU.</p>
+    </div>
+</html>
